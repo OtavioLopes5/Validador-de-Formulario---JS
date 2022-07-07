@@ -1,12 +1,14 @@
 //ESTE VALIDADOR PODE SER DESABILITADO, ele é apenas no front-end!!! (este projeto serve para estudo da linguagem!)
-let objValidator = { //objeto principal de validação
+
+//objeto principal de validação
+let objValidator = { 
     handleSubmit:(event)=> {
         event.preventDefault();
         
         let send = true;
         let inputs = form.querySelectorAll('input');
 
-        objValidator.clearErrors(); //valida se ja tem o campo de aviso
+        objValidator.clearErrors(); 
 
         for(let i = 0;i < inputs.length;i++) {
             let input = inputs[i];
@@ -21,6 +23,7 @@ let objValidator = { //objeto principal de validação
             form.submit();
         }
     },
+    //erros visuais dos campos usuario,email e senha
     checkInput:(input) => {
         let rules = input.getAttribute('data-rules');
         if(rules !== null) {
@@ -52,7 +55,8 @@ let objValidator = { //objeto principal de validação
 
         return true;
     },
-    showError:(input, error) => { //cria uma div de erro
+    //cria uma div de erro
+    showError:(input, error) => { 
         input.style.borderColor = '#FF0000';
 
         let errorElement = document.createElement('div');
@@ -61,6 +65,8 @@ let objValidator = { //objeto principal de validação
 
         input.parentElement.insertBefore(errorElement, input.ElementSebling);
     },
+    
+    //valida se ja tem o campo de aviso
     clearErrors:() => {
         let inputs = form.querySelectorAll('input');
         for(let i = 0;i<inputs.length;i++) {
@@ -75,5 +81,4 @@ let objValidator = { //objeto principal de validação
 };
 
 let form = document.querySelector('.validator');
-
 form.addEventListener('submit', objValidator.handleSubmit);
