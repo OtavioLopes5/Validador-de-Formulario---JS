@@ -1,4 +1,4 @@
-# Validador-de-Formulario---JS
+# Validador-de-Formulario-JS
 
 - Valida caracteres do login do usuario - Minimo de 4 caracteres
 
