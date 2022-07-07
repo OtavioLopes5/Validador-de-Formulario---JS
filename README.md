@@ -5,3 +5,5 @@
 - Verifica se o email foi digitado corretamente com Regex
 
 - Valida se existem 6 caracteres digitados na senha.
+
+- Se aparecer o Erro 405 é porque está tudo certo.
