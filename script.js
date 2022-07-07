@@ -1,4 +1,3 @@
-//ESTE VALIDADOR PODE SER DESABILITADO, ele é apenas no front-end!!! (este projeto serve para estudo da linguagem!)
 
 //objeto principal de validação
 let objValidator = { 
